@@ -88,38 +88,6 @@ function DetailSection() {
 
                 <div className='w-6/12  space-y-3'>
 
-                    {/* <div className=' flex w-full'>
-                        <div className=' w-1/2 px-2'>
-                            <div className='flex items-center space-x-2 text-lightblue'>
-                                <span className='text-lg text-lightblue'><GiTicket /> </span>
-                                <span className='text-lg'>Booking Type</span>
-                            </div>
-                            <div className=''>
-                                <select className='px-3 w-full  border placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl bg-light text-text' >
-                                    <option>choose one</option>
-                                    <option>data</option>
-                                    <option>data </option>
-                                    <option>data </option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div className=' w-1/2 px-2'>
-                            <div className='flex items-center space-x-2 text-lightblue'>
-                                <span className='text-lg text-lightblue'><FaPersonBooth /> </span>
-                                <span className='text-lg'>Base</span>
-                            </div>
-                            <div className=''>
-                                <select className='px-3 w-full  border placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl bg-light text-text' >
-                                    <option>choose one</option>
-                                    <option>data</option>
-                                    <option>data </option>
-                                    <option>data </option>
-                                </select>
-                            </div>
-                        </div>
-                    </div> */}
-
                     <div className='flex w-full py-10 px-2 space-x-2'>
                         <div className=' items-center space-x-2 w-1/2'>
                             <input id='api' type='checkbox' className='w-5 h-5 peer' />
