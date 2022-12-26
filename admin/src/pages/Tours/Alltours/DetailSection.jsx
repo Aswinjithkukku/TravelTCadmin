@@ -1,4 +1,6 @@
 import React from 'react'
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { IoLocationOutline } from 'react-icons/io5'
 import { GiStabbedNote, GiWorld, GiTicket } from 'react-icons/gi'
 import { BiRename, BiSort } from 'react-icons/bi'
@@ -81,19 +83,12 @@ function DetailSection() {
                         <input className='px-3 w-full  border placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl bg-light text-text' />
                     </div>
 
-                    <div className='w-full px-2'>
-                        <div className='flex items-center space-x-2 text-lightblue'>
-                            <span className='text-lg text-lightblue'><GiStabbedNote /> </span>
-                            <span className='text-lg'>Note</span>
-                        </div>
-                        <textarea className='px-3 w-full  border placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl bg-light text-text' />
-                    </div>
 
                 </div>
 
                 <div className='w-6/12  space-y-3'>
 
-                    <div className=' flex w-full'>
+                    {/* <div className=' flex w-full'>
                         <div className=' w-1/2 px-2'>
                             <div className='flex items-center space-x-2 text-lightblue'>
                                 <span className='text-lg text-lightblue'><GiTicket /> </span>
@@ -123,20 +118,31 @@ function DetailSection() {
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className='flex w-full py-10 px-2'>
-                        <div className='flex items-center space-x-2 w-1/2'>
-                            <input id='api' type='checkbox' className='w-5 h-5' />
+                    <div className='flex w-full py-10 px-2 space-x-2'>
+                        <div className=' items-center space-x-2 w-1/2'>
+                            <input id='api' type='checkbox' className='w-5 h-5 peer' />
                             <label htmlFor='api' className=' text-lightblue text-lg'>
                                 is Api Connected
                             </label>
+                            <select className='w-full peer-checked:block hidden px-3  border placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl bg-light text-text'>
+                                <option>Choose api</option>
+                                <option>api title</option>
+                            </select>
                         </div>
-                        <div className='flex items-center space-x-2 w-1/2'>
-                            <input id='offer' type='checkbox' className='w-5 h-5' />
-                            <label htmlFor='offer' className=' text-lightblue text-lg'>
-                                is Offer
-                            </label>
+                        <div className=' w-1/2 px-2'>
+                            <div className='flex items-center space-x-2 text-lightblue'>
+                                <span className='text-lg text-lightblue'><FaPersonBooth /> </span>
+                                <span className='text-lg'>is Offer</span>
+                            </div>
+                            <div className=''>
+                                <select className='px-3 w-full  border placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl bg-light text-text' >
+                                    <option>choose one</option>
+                                    <option>flat</option>
+                                    <option>discount </option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
@@ -181,10 +187,10 @@ function DetailSection() {
                         </div>
                     </div>
 
-                    <div className=' flex justify-end mt-10 mr-10'>
-                        <button className='bg-lightblue hover:bg-blue text-white px-5 py-2 rounded-lg'>Submit</button>
-                    </div>
                 </div>
+            </div>
+            <div className=' flex justify-end mt-10 mr-10'>
+                <button className='bg-lightblue hover:bg-blue text-white px-5 py-2 rounded-lg'>Submit</button>
             </div>
         </div>
     )

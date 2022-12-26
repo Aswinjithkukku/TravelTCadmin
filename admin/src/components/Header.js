@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiLogOut, FiMenu } from "react-icons/fi";
-import { BsBellFill, BsGear, BsGrid } from "react-icons/bs";
+import { BsGear, BsGrid } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 

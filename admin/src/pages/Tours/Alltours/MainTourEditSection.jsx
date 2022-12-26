@@ -5,18 +5,30 @@ import { HiOutlineTicket, HiPhoto } from 'react-icons/hi2'
 import DetailSection from './DetailSection'
 import DescriptionSection from './DescriptionSection'
 import TicketSection from './TicketSection'
+import { AiOutlineLeft } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
+import MediaSection from './MediaSection'
 
-function MainSection() {
+function MainTourEditSection() {
     const [view, setView] = useState({
-        details: false,
+        details: true,
         ticket: false,
         description: false,
         media: false
     })
     return (
         <div className='mx-5'>
+            <div className='my-10'>
+                <h1 className='text-3xl font-bold'>Attraction Edit <span className='font-normal'>(Dubai Frame)</span></h1>
+                <button className='my-5 text-lightblue '>
+                    <Link to='/tours/all' className='flex items-center space-x-2'>
+                        <span className=''><AiOutlineLeft /></span>
+                        <span className=''>Go Back</span>
+                    </Link>
+                </button>
+            </div>
             {/* components */}
-            <div className='w-full flex justify-around gap-5'>
+            <div className='w-1/2 py-2 flex justify-around gap-5  shadow-md bg-cardtransblue px-2 rounded-lg'>
                 <button
                     className={`${view.details ? "bg-lightblue text-white" : "bg-white hover:border-lightblue hover:text-lightblue"} flex space-x-2 border py-3  w-full justify-center rounded-lg  items-center cursor-pointer`}
                     onClick={() => setView((prev) => {
@@ -70,9 +82,14 @@ function MainSection() {
                     <TicketSection />
                 </div>
             )}
+            {view.media && (
+                <div className='my-10'>
+                    <MediaSection />
+                </div>
+            )}
             {/* map data */}
         </div>
     )
 }
 
-export default MainSection
+export default MainTourEditSection
