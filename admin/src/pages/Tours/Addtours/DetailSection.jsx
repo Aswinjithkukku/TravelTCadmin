@@ -6,7 +6,7 @@ import { FaPersonBooth, FaAddressCard } from 'react-icons/fa'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
 import { TbWorldLatitude, TbWorldLongitude } from 'react-icons/tb'
 
-function DetailSection() {
+function DetailSection({ view, setView }) {
     const [offer, setOffer] = useState("")
     return (
         <div className=''>
@@ -114,7 +114,7 @@ function DetailSection() {
                             </div>
                         </div>
                     </div>
-                    {offer  && (
+                    {offer && (
                         <div className='flex w-full px-2 space-x-2 justify-end'>
                             <div className=' w-1/2 '>
                                 <div className='flex items-center space-x-2 text-lightblue'>
@@ -174,7 +174,11 @@ function DetailSection() {
                 </div>
             </div>
             <div className=' flex justify-end mt-10 mr-10'>
-                <button className='bg-lightblue hover:bg-blue text-white px-5 py-2 rounded-lg'>Submit</button>
+                <button className='bg-lightblue hover:bg-blue text-white px-5 py-2 rounded-lg'
+                    onClick={() => setView((prev) => {
+                        return { ...prev, media: false, details: false, description: true }
+                    })}
+                >next</button>
             </div>
         </div>
     )

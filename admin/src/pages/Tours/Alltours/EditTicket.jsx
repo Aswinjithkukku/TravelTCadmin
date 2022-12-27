@@ -7,13 +7,13 @@ import { BsFillJournalBookmarkFill } from 'react-icons/bs'
 import { MdPrecisionManufacturing } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 
-function AddTicket() {
-    return (
-        <div className=''>
+function EditTicket() {
+  return (
+    <div className=''>
 
             <div className='p-7 space-y-4'>
                 <div className=' my-10'>
-                    <h1 className='text-3xl font-bold text-darktext'>Add Ticket</h1>
+                    <h1 className='text-3xl font-bold text-darktext'>Edit Ticket</h1>
                     <button className='my-5 text-lightblue '>
                         <Link to='/tours/edit' className='flex items-center space-x-2'>
                             <span className=''><AiOutlineLeft /></span>
@@ -238,13 +238,13 @@ function AddTicket() {
                 </div>
 
                 <div className=' flex justify-end mt-10 mr-10'>
-                    <button className='bg-lightblue hover:bg-blue text-white px-5 py-2 rounded-lg'>Submit</button>
+                    <button className='bg-lightblue hover:bg-blue text-white px-5 py-2 rounded-lg'>Update</button>
                 </div>
 
             </div>
 
         </div>
-    )
+  )
 }
 
-export default AddTicket
+export default EditTicket

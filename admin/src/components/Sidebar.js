@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { FiLogOut } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
-import { BsShop, BsGrid, BsFileRichtext } from "react-icons/bs";
+// import { BsShop, BsGrid, BsFileRichtext } from "react-icons/bs";
 import { GiIsland } from "react-icons/gi";
-import { MdPayment } from "react-icons/md";
+// import { MdPayment } from "react-icons/md";
 
-import { sidebarLinks } from "../data";
+// import { sidebarLinks } from "../data";
 import { AiOutlineDown } from "react-icons/ai";
 function Sidebar() {
   const location = useLocation();
@@ -63,8 +63,7 @@ function Sidebar() {
               <div
                 className={
                   "relative flex items-center gap-[15px] px-6 py-[14px] text-[15px] transition-all  cursor-pointer justify-between " +
-                  (location.pathname === "/homepage" ||
-                  location.pathname === "/homepage"
+                  (location.pathname.includes("/homepages")
                     ? "text-lightblue"
                     : "text-darktext hover:text-white")
                 }
@@ -83,8 +82,7 @@ function Sidebar() {
                 <span className="flex items-center">
                   <AiOutlineDown />
                 </span>
-                {(location.pathname === "/homepage" ||
-                  location.pathname === "/homepage") && (
+                {location.pathname.includes("/homepages") && (
                   <span className="absolute top-0 left-0 h-full bg-lightblue w-[4px] rounded-r"></span>
                 )}
               </div>
@@ -94,11 +92,96 @@ function Sidebar() {
                 } transition-all duration-500 overflow-hidden`}
               >
                 <ul className="space-y-2 text-darktext">
-                  <li className="">All Tours</li>
-                  <li className="">Add Tours</li>
-                  <li className="">Categories</li>
-                  <li className="">Countries</li>
-                  <li className="">Reviews</li>
+                  <li
+                    className={
+                      " cursor-pointer " +
+                      (location.pathname.includes("/homepages/logo")
+                        ? "text-lightblue"
+                        : "text-darktext hover:text-bluetrans")
+                    }
+                  >
+                    <Link to="/homepages/logo">Logos</Link>
+                  </li>
+                  <li
+                    className={
+                      " cursor-pointer " +
+                      (location.pathname.includes("/homepages/helpline")
+                        ? "text-lightblue"
+                        : "text-darktext hover:text-bluetrans")
+                    }
+                  >
+                    <Link to="/homepages/helpline">Helpline</Link>
+                  </li>
+                  <li
+                    className={
+                      " cursor-pointer " +
+                      (location.pathname.includes("/homepages/banner")
+                        ? "text-lightblue"
+                        : "text-darktext hover:text-bluetrans")
+                    }
+                  >
+                    <Link to="/homepages/banner">Banners</Link>
+                  </li>
+                  <li
+                    className={
+                      " cursor-pointer " +
+                      (location.pathname.includes("/homepages/social")
+                        ? "text-lightblue"
+                        : "text-darktext hover:text-bluetrans")
+                    }
+                  >
+                    <Link to="/homepages/social"> Socials </Link>
+                  </li>
+                  <li
+                    className={
+                      " cursor-pointer " +
+                      (location.pathname.includes("/homepages/card")
+                        ? "text-lightblue"
+                        : "text-darktext hover:text-bluetrans")
+                    }
+                  >
+                    <Link to="/homepages/card">Cards</Link>
+                  </li>
+                  <li
+                    className={
+                      " cursor-pointer " +
+                      (location.pathname.includes("/homepages/bestselling")
+                        ? "text-lightblue"
+                        : "text-darktext hover:text-bluetrans")
+                    }
+                  >
+                    <Link to="/homepages/bestselling">Best Selling</Link>
+                  </li>
+                  <li
+                    className={
+                      " cursor-pointer " +
+                      (location.pathname.includes("/homepages/topselling")
+                        ? "text-lightblue"
+                        : "text-darktext hover:text-bluetrans")
+                    }
+                  >
+                    <Link to="/homepages/topselling">Top Selling</Link>
+                  </li>
+                  <li
+                    className={
+                      " cursor-pointer " +
+                      (location.pathname.includes("/homepages/blog")
+                        ? "text-lightblue"
+                        : "text-darktext hover:text-bluetrans")
+                    }
+                  >
+                    <Link to="/homepages/blog">Blog</Link>
+                  </li>
+                  <li
+                    className={
+                      " cursor-pointer " +
+                      (location.pathname.includes("/homepages/footer")
+                        ? "text-lightblue"
+                        : "text-darktext hover:text-bluetrans")
+                    }
+                  >
+                    <Link to="/homepages/footer">Footer</Link>
+                  </li>
                 </ul>
               </div>
             </li>
@@ -157,14 +240,15 @@ function Sidebar() {
                   >
                     <Link to="/tours/add">Add Tours</Link>
                   </li>
-                  <li className=" cursor-pointer">
+                  <li
+                    className={
+                      " cursor-pointer " +
+                      (location.pathname.includes("/tours/category")
+                        ? "text-lightblue"
+                        : "text-darktext hover:text-bluetrans")
+                    }
+                  >
                     <Link to="/tours/category">Categories</Link>
-                  </li>
-                  <li className=" cursor-pointer">
-                    <Link to="/tours/country">Countries</Link>
-                  </li>
-                  <li className=" cursor-pointer">
-                    <Link to="/tours/review">Reviews</Link>
                   </li>
                 </ul>
               </div>

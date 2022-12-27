@@ -1,10 +1,18 @@
 import React from 'react'
-import { AiFillDelete } from 'react-icons/ai'
 import { BsImages } from 'react-icons/bs'
 
 function LogoSection() {
     return (
-        <div>
+        <div className='mx-5'>
+            <div className='my-10'>
+                <h1 className='text-3xl font-bold'>Logo </h1>
+                {/* <button className='my-5 text-lightblue '>
+                    <Link to='/tours/add' className='flex items-center space-x-2'>
+                        <span className=''><AiOutlineLeft /></span>
+                        <span className=''>Go Back</span>
+                    </Link>
+                </button> */}
+            </div>
             <div className=' space-y-5'>
 
                 <div className=''>

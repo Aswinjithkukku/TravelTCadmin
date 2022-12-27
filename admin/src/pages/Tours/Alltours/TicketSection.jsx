@@ -1,16 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { AiFillDelete } from 'react-icons/ai'
 import { FaRegEdit } from 'react-icons/fa'
 import { GoPlus } from 'react-icons/go'
-import { useNavigate } from 'react-router-dom'
-import TicketEditModal from './TicketEditModal'
-import TicketModal from './TicketModal'
+import { Link, useNavigate } from 'react-router-dom'
 
 function TicketSection() {
     const navigate = useNavigate()
 
-    const [viewTicketModal, setViewTicketModal] = useState(false)
-    const [editView, setEditView] = useState(false)
 
     return (
         <>
@@ -40,7 +36,7 @@ function TicketSection() {
                         </thead>
                         <tbody>
                             <tr className='group cursor-pointer'>
-                                <td className='py-3 px-2 text-left font-light group-hover:text-lightblue text-darktext' onClick={() => setEditView(!editView)}>
+                                <td className='py-3 px-2 text-left font-light group-hover:text-lightblue text-darktext' >
                                     <button className='px-4 rounded-md bg-lightblue text-white'>upload</button>
                                 </td>
                                 <td className='py-3 px-2 text-left font-light group-hover:text-lightblue text-darktext'>1</td>
@@ -61,7 +57,9 @@ function TicketSection() {
                                         <AiFillDelete />
                                     </span>
                                     <span className='hover:text-blue text-lightblue text-2xl'>
-                                        <FaRegEdit />
+                                        <Link to='/tours/ticket/edit'>
+                                            <FaRegEdit />
+                                        </Link>
                                     </span>
                                 </td>
                             </tr>
@@ -69,8 +67,6 @@ function TicketSection() {
                     </table>
                 </div>
             </div>
-            <TicketModal view={viewTicketModal} setView={setViewTicketModal} />
-            <TicketEditModal editView={editView} setEditView={setEditView} />
         </>
     )
 }
