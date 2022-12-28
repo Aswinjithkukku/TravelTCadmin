@@ -1,4 +1,6 @@
 import {
+  LoginPage,
+  SignupPage,
   DashboardPage,
   TourAddPage,
   TourCategoryPage,
@@ -19,7 +21,12 @@ import {
   HomeBestSellingPage,
   HomeTopSellingPage,
   HomeBlogPage,
-  HomeFooterPage
+  HomeAddBlogPage,
+  HomeUpdateBlogPage,
+  HomeFooterPage,
+  HomeAddFooterPage,
+
+  GeneralCountry,
 } from "../pages/Heros";
 import MainLayout from "./MainLayout";
 
@@ -29,6 +36,8 @@ const ThemeRoutes = [
     element: <MainLayout />,
     children: [
       { path: "", element: <DashboardPage /> },
+      { path: "/login", element: <LoginPage /> },
+      { path: "/register", element: <SignupPage /> },
       { path: "/tours/all", element: <TourPage /> },
       { path: "/tours/add", element: <TourAddPage /> },
       { path: "/tours/category", element: <TourCategoryPage /> },
@@ -36,6 +45,7 @@ const ThemeRoutes = [
       { path: "/tours/ticket/add", element: <TourTicketAddPage /> },
       { path: "/tours/ticket/edit", element: <TourTicketEditPage /> },
       { path: "/tours/edit", element: <TourEditPage /> },
+
       { path: "/homepages/logo", element: <HomeLogoPage /> },
       { path: "/homepages/helpline", element: <HomeHelplinePage /> },
       { path: "/homepages/social", element: <HomeSocialPage /> },
@@ -47,7 +57,12 @@ const ThemeRoutes = [
       { path: "/homepages/Bestselling", element: <HomeBestSellingPage /> },
       { path: "/homepages/topselling", element: <HomeTopSellingPage /> },
       { path: "/homepages/blog", element: <HomeBlogPage /> },
+      { path: "/homepages/blog/add", element: <HomeAddBlogPage /> },
+      { path: "/homepages/blog/edit", element: <HomeUpdateBlogPage /> },
       { path: "/homepages/footer", element: <HomeFooterPage /> },
+      { path: "/homepages/footer/add", element: <HomeAddFooterPage /> },
+
+      { path: "/general/country", element: <GeneralCountry /> },
     ],
   },
 ];

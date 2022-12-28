@@ -1,3 +1,5 @@
+import LoginPage from "./Auth/LoginPage";
+import SignupPage from "./Auth/SignupPage";
 import DashboardPage from "./DashboardPage";
 import TourEditPage from "./Tours/TourEditPage";
 import TourPage from "./Tours/TourPage";
@@ -17,10 +19,15 @@ import HomeAddCardPage from "./Homepage/HomeAddCardPage";
 import HomeBestSellingPage from "./Homepage/HomeBestSellingPage";
 import HomeTopSellingPage from "./Homepage/HomeTopSellingPage";
 import HomeBlogPage from "./Homepage/HomeBlogPage";
+import HomeAddBlogPage from "./Homepage/HomeAddBlogPage";
+import HomeUpdateBlogPage from "./Homepage/HomeUpdateBlogPage";
 import HomeFooterPage from "./Homepage/HomeFooterPage";
-
+import HomeAddFooterPage from "./Homepage/HomeAddFooterPage";
+import GeneralCountry from "./General/GeneralCountry";
 
 export {
+  LoginPage,
+  SignupPage,
   DashboardPage,
   TourEditPage,
   TourPage,
@@ -40,5 +47,9 @@ export {
   HomeBestSellingPage,
   HomeTopSellingPage,
   HomeBlogPage,
+  HomeAddBlogPage,
+  HomeUpdateBlogPage,
   HomeFooterPage,
+  HomeAddFooterPage,
+  GeneralCountry,
 };

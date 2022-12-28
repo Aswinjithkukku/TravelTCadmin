@@ -58,6 +58,55 @@ function Sidebar() {
               </Link>
             </li>
 
+            {/* general */}
+            <li className="">
+              <div
+                className={
+                  "relative flex items-center gap-[15px] px-6 py-[14px] text-[15px] transition-all  cursor-pointer justify-between " +
+                  (location.pathname.includes("/general")
+                    ? "text-lightblue"
+                    : "text-darktext hover:text-white")
+                }
+                onClick={() =>
+                  setView((prev) => {
+                    return { ...prev, tours: !view.tours };
+                  })
+                }
+              >
+                <span className=" flex items-center space-x-2">
+                  <span className="flex items-center">
+                    <GiIsland />
+                  </span>
+                  <span>General</span>
+                </span>
+                <span className="flex items-center">
+                  <AiOutlineDown />
+                </span>
+                {location.pathname.includes("/general") && (
+                  <span className="absolute top-0 left-0 h-full bg-lightblue w-[4px] rounded-r"></span>
+                )}
+              </div>
+              <div
+                className={`pl-7  ${
+                  view.tours ? "max-h-[100vh]" : "max-h-0"
+                } transition-all duration-500 overflow-hidden`}
+              >
+                <ul className="space-y-2 text-darktext">
+                  <li
+                    className={
+                      " cursor-pointer " +
+                      (location.pathname.includes("/general/country")
+                        ? "text-lightblue"
+                        : "text-darktext hover:text-bluetrans")
+                    }
+                  >
+                    <Link to="/general/country">country</Link>
+                  </li>
+                  
+                </ul>
+              </div>
+            </li>
+
             {/* homepage */}
             <li className="">
               <div
@@ -94,7 +143,7 @@ function Sidebar() {
                 <ul className="space-y-2 text-darktext">
                   <li
                     className={
-                      " cursor-pointer " +
+                      " cursor-pointer" +
                       (location.pathname.includes("/homepages/logo")
                         ? "text-lightblue"
                         : "text-darktext hover:text-bluetrans")

@@ -19,12 +19,6 @@ function MainAddtourSection() {
         <div className='mx-5'>
             <div className='my-10'>
                 <h1 className='text-3xl font-bold'>Add new attraction </h1>
-                {/* <button className='my-5 text-lightblue '>
-                    <Link to='/tours/add' className='flex items-center space-x-2'>
-                        <span className=''><AiOutlineLeft /></span>
-                        <span className=''>Go Back</span>
-                    </Link>
-                </button> */}
             </div>
             {/* components */}
             <div className='w-1/2 py-2 flex justify-around gap-5  shadow-md bg-cardtransblue px-2 rounded-lg'>

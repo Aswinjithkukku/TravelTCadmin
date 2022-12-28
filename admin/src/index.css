@@ -20,3 +20,15 @@ body {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
+
+.login_bg {
+  background-image: url('./static/loginbg.jpg');
+}
+
+.glassmorphism {
+  background: rgba( 84, 80, 80, 0.35 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 8px );
+  -webkit-backdrop-filter: blur( 8px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}

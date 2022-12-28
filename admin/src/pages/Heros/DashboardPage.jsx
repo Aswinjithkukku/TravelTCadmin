@@ -3,7 +3,7 @@ import MainSection from '../Dashboard/MainSection'
 
 function DashboardPage() {
   return (
-    <div>
+    <div className='py-10 mx-5'>
       <MainSection />
     </div>
   )
