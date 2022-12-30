@@ -1,7 +1,20 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from '../../axios'
+import { saveUser } from '../../redux/slices/userSlice'
 
 function LoginSection() {
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    const { isLoggedIn } = useSelector(state => state.user)
+
+    useEffect(() => {
+        if(isLoggedIn) {
+            navigate('/')
+        }
+    },[isLoggedIn,navigate])
 
     const [ data, setData ] = useState({
         email: "",
@@ -12,8 +25,14 @@ function LoginSection() {
         setData({ ...data, [e.target.name]: e.target.value });
     };
 
-    const submitHandler = (e) => {
+    const submitHandler = async(e) => {
         e.preventDefault()
+        try{
+            const response = await axios.post('/auth/login',data)
+            dispatch(saveUser(response.data))
+        }catch (err){
+            console.log(err);
+        }
     }
     return (
         <div className='fixed top-0 left-0 right-0 bottom-0'>

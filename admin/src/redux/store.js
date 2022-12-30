@@ -1,12 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import {
-    footerReducer
+    footerReducer,
+    userReducer,
+    categoryReducer,
 } from './slices';
 
 export const store = configureStore({
     reducer: {
-        footer: footerReducer
+        footer: footerReducer,
+        user: userReducer,
+        category: categoryReducer,
     },
     devTools: true,
 });

@@ -13,6 +13,7 @@ function Sidebar() {
   const [view, setView] = useState({
     homepage: false,
     tours: false,
+    general: false,
     visa: false,
     payment: false,
   });
@@ -69,7 +70,7 @@ function Sidebar() {
                 }
                 onClick={() =>
                   setView((prev) => {
-                    return { ...prev, tours: !view.tours };
+                    return { ...prev, general: !view.general };
                   })
                 }
               >
@@ -88,7 +89,7 @@ function Sidebar() {
               </div>
               <div
                 className={`pl-7  ${
-                  view.tours ? "max-h-[100vh]" : "max-h-0"
+                  view.general ? "max-h-[100vh]" : "max-h-0"
                 } transition-all duration-500 overflow-hidden`}
               >
                 <ul className="space-y-2 text-darktext">
@@ -298,6 +299,16 @@ function Sidebar() {
                     }
                   >
                     <Link to="/tours/category">Categories</Link>
+                  </li>
+                  <li
+                    className={
+                      " cursor-pointer " +
+                      (location.pathname.includes("/tours/reviews")
+                        ? "text-lightblue"
+                        : "text-darktext hover:text-bluetrans")
+                    }
+                  >
+                    <Link to="/tours/reviews">Reviews</Link>
                   </li>
                 </ul>
               </div>

@@ -1,3 +1,3 @@
-import ThemeRoutes from "./Router";
+import AdminRouter from "../routes/AdminRouter";
 
-export { ThemeRoutes };
+export { AdminRouter };

@@ -1,3 +1,5 @@
 import footerReducer from "./footerSlice";
+import userReducer from "./userSlice"
+import categoryReducer from "./categorySlice"
 
-export { footerReducer }
+export { footerReducer, userReducer, categoryReducer }
